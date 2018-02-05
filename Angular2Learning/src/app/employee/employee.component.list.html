@@ -1,0 +1,30 @@
+﻿<employee-count [all] ="getTotalEmployeeCount()"
+                [male] ="getTotalMaleEmployeeCount()"
+                [female] ="getTotalFemaleEmployeeCount()"
+                (countRadioButtonSelectionChanged) ="onEmployeeCountRadioButtonChange($event)"></employee-count>
+<br /><br />
+<table>
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Anual Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let employee of employees;trackBy:trackByEmployeeCode">
+            <tr *ngIf="selectedEmployeeCountRadioButton == 'All' || selectedEmployeeCountRadioButton == employee.gender">
+                <td>{{ employee.code }}</td>
+                <td>{{ employee.name | employeeTitle:employee.gender }}</td>
+                <td>{{ employee.gender }}</td>
+                <td>{{ employee.salary }}</td>
+            </tr>
+        </ng-container>
+        <tr *ngIf ="!employees || employees.length == 0">
+            <td colspan="4"> No employee records found.</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<button (click)="getEmployee()">Refresh Employee</button>

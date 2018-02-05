@@ -1,0 +1,10 @@
+﻿<span style="font-size:large">Show: </span>
+
+<input type="radio" name="options" value="All" [(ngModel)]="selectedRedioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+<span style="font-size:large">{{"All(" + all + ")"}}</span>
+
+<input type="radio" name="options" value="Male" [(ngModel)]="selectedRedioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+<span style="font-size:large">{{"Male(" + male + ")"}}</span>
+
+<input type="radio" name="options" value="Female" [(ngModel)]="selectedRedioButtonValue" (change)="onRadioButtonSelectionChange()"/>
+<span style="font-size:large">{{"Female(" + female + ")"}}</span>
