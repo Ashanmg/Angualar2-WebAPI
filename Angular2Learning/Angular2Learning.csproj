@@ -104,9 +104,9 @@
     <Content Include="bs-config.json" />
     <Content Include="package.json" />
     <Content Include="src\app\app.component.html" />
-    <Content Include="src\app\employee\employee.component.html" />
-    <Content Include="src\app\employee\employee.component.list.html" />
-    <Content Include="src\app\employee\employeeCount.component.html" />
+    <Content Include="src\app\employee.component\employee.component.html" />
+    <Content Include="src\app\employee.component\employee.component.list.html" />
+    <Content Include="src\app\employee.component\employeeCount.component.html" />
     <Content Include="src\tsconfig.json" />
     <Content Include="tslint.json" />
     <None Include="Web.Debug.config">
@@ -132,11 +132,12 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
-    <TypeScriptCompile Include="src\app\employee\employee.component.list.ts" />
-    <TypeScriptCompile Include="src\app\employee\employee.component.ts" />
-    <TypeScriptCompile Include="src\app\employee\employee.Title.Pipe.ts" />
-    <TypeScriptCompile Include="src\app\employee\employee.ts" />
-    <TypeScriptCompile Include="src\app\employee\employeeCount.component.ts" />
+    <TypeScriptCompile Include="src\app\employee.component\employee.component.list.ts" />
+    <TypeScriptCompile Include="src\app\employee.component\employee.component.ts" />
+    <TypeScriptCompile Include="src\app\employee.component\employee.Title.Pipe.ts" />
+    <TypeScriptCompile Include="src\app\employee.component\employee.ts" />
+    <TypeScriptCompile Include="src\app\employee.component\employeeCount.component.ts" />
+    <TypeScriptCompile Include="src\app\employee.service\employee.services.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>
