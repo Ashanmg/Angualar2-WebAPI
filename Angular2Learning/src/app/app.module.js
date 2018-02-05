@@ -9,17 +9,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
-var employee_component_1 = require("./employee/employee.component");
-var employee_component_list_1 = require("./employee/employee.component.list");
-var employee_Title_Pipe_1 = require("./employee/employee.Title.Pipe");
-var employeeCount_component_1 = require("./employee/employeeCount.component");
+var employee_component_1 = require("./employee.component/employee.component");
+var employee_component_list_1 = require("./employee.component/employee.component.list");
+var employee_Title_Pipe_1 = require("./employee.component/employee.Title.Pipe");
+var employeeCount_component_1 = require("./employee.component/employeeCount.component");
+var employee_services_1 = require("./employee.service/employee.services");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
+            providers: [employee_services_1.EmployeeService],
             declarations: [app_component_1.AppComponent, employee_component_1.EmployeeComponent, employee_component_list_1.EmployeeComponentList, employee_Title_Pipe_1.EmployeeTitlePipe, employeeCount_component_1.EmployeeCountComponent],
             bootstrap: [app_component_1.AppComponent]
         })
