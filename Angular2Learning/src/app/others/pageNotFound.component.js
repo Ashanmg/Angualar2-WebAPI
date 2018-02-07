@@ -7,17 +7,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.name = 'Employee Details!!!';
+var PageNotFoundComponent = /** @class */ (function () {
+    function PageNotFoundComponent() {
     }
-    AppComponent = __decorate([
+    PageNotFoundComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "<div style=\"padding:5px\">\n                    <ul class=\"nav nav-tabs\">\n                        <li routerLinkActive=\"active\"><a routerLink=\"home\">Home</a></li>\n                        <li routerLinkActive=\"active\"><a routerLink=\"employee\">Employee</a></li>\n                    </ul>\n                    <router-outlet></router-outlet>\n                </div>"
+            template: '<h2> Your loading page can not be found.</h2>'
         })
-    ], AppComponent);
-    return AppComponent;
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.PageNotFoundComponent = PageNotFoundComponent;
+//# sourceMappingURL=pageNotFound.component.js.map

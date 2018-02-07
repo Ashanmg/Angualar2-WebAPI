@@ -10,20 +10,29 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
+var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
 var employee_component_1 = require("./employee.component/employee.component");
 var employee_component_list_1 = require("./employee.component/employee.component.list");
 var employee_Title_Pipe_1 = require("./employee.component/employee.Title.Pipe");
 var employeeCount_component_1 = require("./employee.component/employeeCount.component");
+var home_component_1 = require("./home.component/home.component");
+var pageNotFound_component_1 = require("./others/pageNotFound.component");
 var employee_services_1 = require("./employee.service/employee.services");
+var appRoutes = [
+    { path: 'home', component: home_component_1.HomeComponent },
+    { path: 'employee', component: employee_component_list_1.EmployeeComponentList },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', component: pageNotFound_component_1.PageNotFoundComponent }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, router_1.RouterModule.forRoot(appRoutes)],
             providers: [employee_services_1.EmployeeService],
-            declarations: [app_component_1.AppComponent, employee_component_1.EmployeeComponent, employee_component_list_1.EmployeeComponentList, employee_Title_Pipe_1.EmployeeTitlePipe, employeeCount_component_1.EmployeeCountComponent],
+            declarations: [app_component_1.AppComponent, employee_component_1.EmployeeComponent, employee_component_list_1.EmployeeComponentList, employee_Title_Pipe_1.EmployeeTitlePipe, employeeCount_component_1.EmployeeCountComponent, home_component_1.HomeComponent, pageNotFound_component_1.PageNotFoundComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
