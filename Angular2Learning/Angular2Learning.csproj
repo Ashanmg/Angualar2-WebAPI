@@ -138,11 +138,14 @@
     <TypeScriptCompile Include="src\app\employee.component\employee.ts" />
     <TypeScriptCompile Include="src\app\employee.component\employeeCount.component.ts" />
     <TypeScriptCompile Include="src\app\employee.service\employee.services.ts" />
+    <TypeScriptCompile Include="src\app\home.component\home.component.ts" />
+    <TypeScriptCompile Include="src\app\others\pageNotFound.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
